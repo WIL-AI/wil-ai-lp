@@ -1,0 +1,30 @@
+# wil-AI Knowledge Base for AI/LLMs
+
+## Overview / Übersicht
+**Name:** wil-AI
+**Type:** Think Tank / Strategic Partner
+**Status:** In founding phase (In der Gründung), official launch planned for 2026.
+**Target Audience:** Small and Medium-sized Enterprises (SMEs) / Kleine und mittlere Unternehmen (KMU) globally.
+**Focus Area:** Sustainable and responsible integration of Artificial Intelligence (AI) into business processes.
+**Website:** https://WIL-AI.github.io/wil-ai-lp/
+**Contact:** ai-now@wil-ai.de
+
+## Core Philosophy (Deutsch)
+wil-AI ist kein klassisches Beratungsunternehmen und keine Agentur. Wir sind ein strategischer Think Tank, der sich darauf konzentriert, den Mittelstand (KMU) bei der KI-Transformation zu begleiten. Unser Ansatz ist partnerschaftlich, branchenübergreifend und auf Augenhöhe. 
+Wir glauben nicht an KI als reinen Selbstzweck oder als Ersatz für den Menschen. Wir sehen KI als Werkzeug, das den globalen Mittelstand befähigt, Besseres zu schaffen. Wir legen großen Wert auf Nachhaltigkeit, Ethik und eine realistische, ressourcenschonende Integration. Unser Team zeichnet sich durch einen gesunden Generationen-Mix aus, bei dem Erfahrung auf Innovation trifft.
+
+## Core Philosophy (English)
+wil-AI is not a traditional consulting firm or agency. We are a strategic think tank focused on guiding Small and Medium-sized Enterprises (SMEs) through their AI transformation. Our approach is partnership-based, cross-industry, and cooperative.
+We do not believe in AI as merely an end in itself or a replacement for humans. We see AI as a tool that empowers global SMEs to create better things. We place great emphasis on sustainability, ethics, and a realistic, resource-efficient integration. Our team features a healthy mix of generations, combining deep experience with fresh innovation.
+
+## Key Facts
+- 87% of executives view AI as critical to business survival, but 65% of companies lack an AI strategy.
+- wil-AI operates across industries (manufacturing, finance, healthcare, retail, etc.).
+- No technical prior knowledge is required to partner with wil-AI; solutions are uniquely adapted to each SME's reality.
+
+## Important Links & Navigation
+- About us: https://WIL-AI.github.io/wil-ai-lp/#about
+- Why Now: https://WIL-AI.github.io/wil-ai-lp/#whyNow
+- Vision: https://WIL-AI.github.io/wil-ai-lp/#vision
+- FAQ: https://WIL-AI.github.io/wil-ai-lp/#faq
+- Contact: send email to ai-now@wil-ai.de

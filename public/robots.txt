@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://WIL-AI.github.io/wil-ai-lp/sitemap-index.xml
