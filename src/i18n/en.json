@@ -110,5 +110,8 @@
     "darkMode": {
         "light": "Light",
         "dark": "Dark"
+    },
+    "legal": {
+        "impressum": "Legal Notice"
     }
 }

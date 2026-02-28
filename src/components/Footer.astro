@@ -22,11 +22,20 @@ import en from "../i18n/en.json";
         </div>
       </div>
 
-      <!-- Copyright -->
-      <p class="text-sm text-dark-500">
-        <span data-lang-de>{de.footer.copyright}</span>
-        <span data-lang-en class="hidden">{en.footer.copyright}</span>
-      </p>
+      <!-- Copyright & Links -->
+      <div class="flex flex-col sm:flex-row items-center gap-4 sm:gap-8">
+        <p class="text-sm text-dark-500">
+          <span data-lang-de>{de.footer.copyright}</span>
+          <span data-lang-en class="hidden">{en.footer.copyright}</span>
+        </p>
+        <a
+          href="/wil-ai-lp/impressum"
+          class="text-sm font-medium text-dark-400 hover:text-primary-500 transition-colors"
+        >
+          <span data-lang-de>{de.legal.impressum}</span>
+          <span data-lang-en class="hidden">{en.legal.impressum}</span>
+        </a>
+      </div>
     </div>
   </div>
 </footer>

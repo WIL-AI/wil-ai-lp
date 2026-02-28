@@ -110,5 +110,8 @@
   "darkMode": {
     "light": "Hell",
     "dark": "Dunkel"
+  },
+  "legal": {
+    "impressum": "Impressum"
   }
 }
