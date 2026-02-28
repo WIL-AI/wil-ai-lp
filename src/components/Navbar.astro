@@ -1,6 +1,6 @@
 ---
-import de from '../i18n/de.json';
-import en from '../i18n/en.json';
+import de from "../i18n/de.json";
+import en from "../i18n/en.json";
 const t = { de, en };
 ---
 
@@ -8,137 +8,231 @@ const t = { de, en };
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 md:h-20">
       <!-- Logo -->
-      <a href="#" class="flex items-center gap-2 group">
-        <div class="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-gradient-to-br from-primary-500 to-accent-400 flex items-center justify-center shadow-lg shadow-primary-500/20">
-          <span class="text-white font-bold text-sm md:text-base">W</span>
+      <a href="#" class="flex items-center gap-2 group nav-logo-text">
+        <div
+          class="w-8 h-8 md:w-10 md:h-10 rounded-lg bg-gradient-to-br from-primary-500 to-accent-400 flex items-center justify-center shadow-lg shadow-primary-500/20"
+        >
+          <span
+            class="font-bold text-sm md:text-base logo-letter"
+            style="color: white !important;">W</span
+          >
         </div>
-        <span class="text-lg md:text-xl font-bold text-white group-hover:text-primary-300 transition-colors duration-300">wil-AI</span>
+        <span
+          class="text-lg md:text-xl font-bold group-hover:text-primary-300 transition-colors duration-300"
+          >wil-AI</span
+        >
       </a>
 
       <!-- Desktop Nav -->
       <div class="hidden md:flex items-center gap-1">
-        {Object.entries(t.de.nav).map(([key, val]) => (
-          <a href={`#${key}`}
-             class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-dark-300 hover:text-white hover:bg-white/5 transition-all duration-300"
-             data-section={key}>
-            <span data-lang-de>{val}</span>
-            <span data-lang-en class="hidden">{t.en.nav[key as keyof typeof t.en.nav]}</span>
-          </a>
-        ))}
+        {
+          Object.entries(t.de.nav).map(([key, val]) => (
+            <a
+              href={`#${key}`}
+              class="nav-link px-3 py-2 rounded-lg text-sm font-medium text-dark-300 hover:text-white hover:bg-white/5 transition-all duration-300"
+              data-section={key}
+            >
+              <span data-lang-de>{val}</span>
+              <span data-lang-en class="hidden">
+                {t.en.nav[key as keyof typeof t.en.nav]}
+              </span>
+            </a>
+          ))
+        }
       </div>
 
       <!-- Controls -->
       <div class="flex items-center gap-2">
         <!-- Language Toggle -->
-        <button id="lang-toggle" class="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold border border-primary-500/30 text-primary-300 hover:bg-primary-500/10 transition-all duration-300" aria-label="Toggle language">
+        <button
+          id="lang-toggle"
+          class="flex items-center gap-1 px-3 py-1.5 rounded-lg text-xs font-semibold border border-primary-500/30 text-primary-300 hover:bg-primary-500/10 transition-all duration-300"
+          aria-label="Toggle language"
+        >
           <span id="lang-label">DE</span>
-          <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          <svg
+            class="w-3 h-3"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M19 9l-7 7-7-7"></path></svg
+          >
         </button>
 
         <!-- Dark Mode Toggle -->
-        <button id="dark-toggle" class="p-2 rounded-lg text-dark-400 hover:text-white hover:bg-white/5 transition-all duration-300" aria-label="Toggle dark mode">
-          <svg id="icon-moon" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
-          <svg id="icon-sun" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        <button
+          id="dark-toggle"
+          class="p-2 rounded-lg text-dark-400 hover:text-white hover:bg-white/5 transition-all duration-300"
+          aria-label="Toggle dark mode"
+        >
+          <svg
+            id="icon-moon"
+            class="w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+            ></path></svg
+          >
+          <svg
+            id="icon-sun"
+            class="w-5 h-5 hidden"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+            ></path></svg
+          >
         </button>
 
         <!-- Mobile Menu Button -->
-        <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg text-dark-400 hover:text-white hover:bg-white/5 transition-all duration-300" aria-label="Open menu">
-          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        <button
+          id="mobile-menu-btn"
+          class="md:hidden p-2 rounded-lg text-dark-400 hover:text-white hover:bg-white/5 transition-all duration-300"
+          aria-label="Open menu"
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            ><path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"></path></svg
+          >
         </button>
       </div>
     </div>
   </div>
 
   <!-- Mobile Nav -->
-  <div id="mobile-nav" class="mobile-nav fixed top-0 right-0 bottom-0 w-72 z-50 nav-glass md:hidden">
+  <div
+    id="mobile-nav"
+    class="mobile-nav fixed top-0 right-0 bottom-0 w-72 z-50 nav-glass md:hidden"
+  >
     <div class="flex items-center justify-end p-4">
-      <button id="mobile-close-btn" class="p-2 rounded-lg text-dark-400 hover:text-white hover:bg-white/5 transition-all" aria-label="Close menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      <button
+        id="mobile-close-btn"
+        class="p-2 rounded-lg text-dark-400 hover:text-white hover:bg-white/5 transition-all"
+        aria-label="Close menu"
+      >
+        <svg
+          class="w-6 h-6"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+          ><path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"></path></svg
+        >
       </button>
     </div>
     <div class="flex flex-col gap-1 px-4">
-      {Object.entries(t.de.nav).map(([key, val]) => (
-        <a href={`#${key}`}
-           class="mobile-nav-link px-4 py-3 rounded-lg text-base font-medium text-dark-300 hover:text-white hover:bg-white/5 transition-all duration-300"
-           data-section={key}>
-          <span data-lang-de>{val}</span>
-          <span data-lang-en class="hidden">{t.en.nav[key as keyof typeof t.en.nav]}</span>
-        </a>
-      ))}
+      {
+        Object.entries(t.de.nav).map(([key, val]) => (
+          <a
+            href={`#${key}`}
+            class="mobile-nav-link px-4 py-3 rounded-lg text-base font-medium text-dark-300 hover:text-white hover:bg-white/5 transition-all duration-300"
+            data-section={key}
+          >
+            <span data-lang-de>{val}</span>
+            <span data-lang-en class="hidden">
+              {t.en.nav[key as keyof typeof t.en.nav]}
+            </span>
+          </a>
+        ))
+      }
     </div>
   </div>
 </nav>
 
 <script>
   // ── Language Toggle ──
-  const langBtn = document.getElementById('lang-toggle');
-  const langLabel = document.getElementById('lang-label');
-  let currentLang = 'de';
+  const langBtn = document.getElementById("lang-toggle");
+  const langLabel = document.getElementById("lang-label");
+  let currentLang = "de";
 
-  langBtn?.addEventListener('click', () => {
-    currentLang = currentLang === 'de' ? 'en' : 'de';
-    document.documentElement.setAttribute('data-lang', currentLang);
+  langBtn?.addEventListener("click", () => {
+    currentLang = currentLang === "de" ? "en" : "de";
+    document.documentElement.setAttribute("data-lang", currentLang);
     if (langLabel) langLabel.textContent = currentLang.toUpperCase();
 
-    document.querySelectorAll('[data-lang-de]').forEach(el => {
-      (el as HTMLElement).classList.toggle('hidden', currentLang !== 'de');
+    document.querySelectorAll("[data-lang-de]").forEach((el) => {
+      (el as HTMLElement).classList.toggle("hidden", currentLang !== "de");
     });
-    document.querySelectorAll('[data-lang-en]').forEach(el => {
-      (el as HTMLElement).classList.toggle('hidden', currentLang !== 'en');
+    document.querySelectorAll("[data-lang-en]").forEach((el) => {
+      (el as HTMLElement).classList.toggle("hidden", currentLang !== "en");
     });
   });
 
   // ── Dark Mode Toggle ──
-  const darkBtn = document.getElementById('dark-toggle');
-  const iconMoon = document.getElementById('icon-moon');
-  const iconSun = document.getElementById('icon-sun');
+  const darkBtn = document.getElementById("dark-toggle");
+  const iconMoon = document.getElementById("icon-moon");
+  const iconSun = document.getElementById("icon-sun");
 
   function applyTheme(isLight: boolean) {
-    document.body.classList.toggle('light-mode', isLight);
-    iconMoon?.classList.toggle('hidden', isLight);
-    iconSun?.classList.toggle('hidden', !isLight);
-    localStorage.setItem('wilai-theme', isLight ? 'light' : 'dark');
+    document.body.classList.toggle("light-mode", isLight);
+    iconMoon?.classList.toggle("hidden", isLight);
+    iconSun?.classList.toggle("hidden", !isLight);
+    localStorage.setItem("wilai-theme", isLight ? "light" : "dark");
   }
 
-  darkBtn?.addEventListener('click', () => {
-    applyTheme(!document.body.classList.contains('light-mode'));
+  darkBtn?.addEventListener("click", () => {
+    applyTheme(!document.body.classList.contains("light-mode"));
   });
 
   // Apply saved theme
-  if (localStorage.getItem('wilai-theme') === 'light') {
+  if (localStorage.getItem("wilai-theme") === "light") {
     applyTheme(true);
   }
 
   // ── Mobile Nav ──
-  const mobileNav = document.getElementById('mobile-nav');
-  const mobileBtn = document.getElementById('mobile-menu-btn');
-  const mobileClose = document.getElementById('mobile-close-btn');
+  const mobileNav = document.getElementById("mobile-nav");
+  const mobileBtn = document.getElementById("mobile-menu-btn");
+  const mobileClose = document.getElementById("mobile-close-btn");
 
-  mobileBtn?.addEventListener('click', () => mobileNav?.classList.add('open'));
-  mobileClose?.addEventListener('click', () => mobileNav?.classList.remove('open'));
+  mobileBtn?.addEventListener("click", () => mobileNav?.classList.add("open"));
+  mobileClose?.addEventListener("click", () =>
+    mobileNav?.classList.remove("open"),
+  );
 
-  document.querySelectorAll('.mobile-nav-link').forEach(link => {
-    link.addEventListener('click', () => mobileNav?.classList.remove('open'));
+  document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+    link.addEventListener("click", () => mobileNav?.classList.remove("open"));
   });
 
   // ── Active Nav Highlighting ──
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav-link');
+  const sections = document.querySelectorAll("section[id]");
+  const navLinks = document.querySelectorAll(".nav-link");
 
   const navObserver = new IntersectionObserver(
     (entries) => {
-      entries.forEach(entry => {
+      entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          const id = entry.target.getAttribute('id');
-          navLinks.forEach(link => {
-            const isActive = link.getAttribute('data-section') === id;
-            link.classList.toggle('text-white', isActive);
-            link.classList.toggle('bg-white/5', isActive);
+          const id = entry.target.getAttribute("id");
+          navLinks.forEach((link) => {
+            const isActive = link.getAttribute("data-section") === id;
+            link.classList.toggle("active-nav-link", isActive);
           });
         }
       });
     },
-    { threshold: 0.3, rootMargin: '-80px 0px -50% 0px' }
+    { threshold: 0.3, rootMargin: "-80px 0px -50% 0px" },
   );
-  sections.forEach(s => navObserver.observe(s));
+  sections.forEach((s) => navObserver.observe(s));
 </script>
