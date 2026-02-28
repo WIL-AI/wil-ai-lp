@@ -1,0 +1,30 @@
+---
+import de from '../i18n/de.json';
+import en from '../i18n/en.json';
+---
+
+<footer class="footer-area py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+      <!-- Logo & tagline -->
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-primary-500 to-accent-400 flex items-center justify-center">
+          <span class="text-white font-bold text-sm">W</span>
+        </div>
+        <div>
+          <span class="font-bold text-white">wil-AI</span>
+          <p class="text-xs text-dark-500">
+            <span data-lang-de>{de.footer.tagline}</span>
+            <span data-lang-en class="hidden">{en.footer.tagline}</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- Copyright -->
+      <p class="text-sm text-dark-500">
+        <span data-lang-de>{de.footer.copyright}</span>
+        <span data-lang-en class="hidden">{en.footer.copyright}</span>
+      </p>
+    </div>
+  </div>
+</footer>

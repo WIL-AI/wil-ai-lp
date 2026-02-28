@@ -1,0 +1,86 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'wil-AI — Think Tank für nachhaltige KI-Integration',
+  description = 'wil-AI ist ein Think Tank für die nachhaltige und verantwortungsvolle Integration von Künstlicher Intelligenz in Geschäftsprozesse.'
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="de" data-lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <meta name="theme-color" content="#020617" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <title>{title}</title>
+</head>
+<body class="antialiased">
+  <div id="scroll-progress"></div>
+  <div id="cursor-glow"></div>
+  <slot />
+
+  <script>
+    // ── Scroll progress bar ──
+    function updateScrollProgress() {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = docHeight > 0 ? (scrollTop / docHeight) * 100 : 0;
+      const bar = document.getElementById('scroll-progress');
+      if (bar) bar.style.width = progress + '%';
+    }
+    window.addEventListener('scroll', updateScrollProgress, { passive: true });
+
+    // ── Cursor glow ──
+    const glow = document.getElementById('cursor-glow');
+    if (glow) {
+      document.addEventListener('mousemove', (e) => {
+        glow.style.left = e.clientX + 'px';
+        glow.style.top = e.clientY + 'px';
+      });
+      document.addEventListener('mouseleave', () => { glow.style.opacity = '0'; });
+      document.addEventListener('mouseenter', () => { glow.style.opacity = '1'; });
+    }
+
+    // ── Scroll reveal (IntersectionObserver) ──
+    const revealObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+    );
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ── SVG icon animation on scroll ──
+    const iconObserver = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animated');
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+    document.querySelectorAll('.icon-animate').forEach(el => iconObserver.observe(el));
+
+    // ── Dark mode ──
+    const savedTheme = localStorage.getItem('wilai-theme');
+    if (savedTheme === 'light') {
+      document.body.classList.add('light-mode');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+{
+  "nav": {
+    "about": "Über uns",
+    "whyNow": "Warum jetzt?",
+    "vision": "Vision",
+    "faq": "FAQ",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "badge": "Think Tank in Gründung",
+    "title": "Die Zukunft gehört denen, die KI-Strategien heute gestalten.",
+    "subtitle": "wil-AI ist ein Think Tank für die nachhaltige und verantwortungsvolle Integration von Künstlicher Intelligenz in den Mittelstand — branchenübergreifend, partnerschaftlich, zukunftsweisend.",
+    "cta": "Mehr erfahren"
+  },
+  "about": {
+    "sectionLabel": "Über uns",
+    "title": "Ein Think Tank. Keine Agentur.",
+    "description": "wil-AI vereint Überzeugung, Erfahrung und einen gesunden Generationen-Mix. Wir sind kein klassisches Beratungsunternehmen — wir verstehen uns als strategische Partner, die speziell mittelständischen Unternehmen (KMU) dabei helfen, den Wandel durch KI global wettbewerbsfähig zu gestalten.",
+    "cards": [
+      {
+        "icon": "handshake",
+        "title": "Partnerschaftlich",
+        "text": "Wir arbeiten auf Augenhöhe. Keine Beraterfloskeln, sondern echtes Mitdenken und Mitgestalten für Ihren Erfolg."
+      },
+      {
+        "icon": "shield",
+        "title": "Verantwortungsvoll",
+        "text": "Nachhaltigkeit und Ethik stehen bei uns nicht im Kleingedruckten — sie sind unser Leitprinzip."
+      },
+      {
+        "icon": "layers",
+        "title": "Branchenübergreifend",
+        "text": "Von der regionalen Produktion bis zum globalen Hidden Champion — smarte KI-Strategien, die auf die Realität des Mittelstands zugeschnitten sind."
+      },
+      {
+        "icon": "users",
+        "title": "Generationen-Mix",
+        "text": "Erfahrung trifft Innovation. Unser Team vereint verschiedene Perspektiven und Altersgruppen."
+      }
+    ]
+  },
+  "whyNow": {
+    "sectionLabel": "Warum jetzt?",
+    "title": "Die Zahlen sprechen für sich.",
+    "subtitle": "Die KI-Revolution wartet nicht. Unternehmen, die heute nicht handeln, verlieren morgen den Anschluss.",
+    "stats": [
+      {
+        "value": 87,
+        "suffix": "%",
+        "label": "der Führungskräfte sehen KI als geschäftskritisch"
+      },
+      {
+        "value": 65,
+        "suffix": "%",
+        "label": "der Unternehmen haben keine KI-Strategie"
+      },
+      {
+        "value": 4.4,
+        "suffix": "Bio. €",
+        "label": "prognostizierter KI-Markt bis 2028"
+      },
+      {
+        "value": 40,
+        "suffix": "%",
+        "label": "Produktivitätssteigerung durch KI-Integration"
+      }
+    ]
+  },
+  "vision": {
+    "quote": "Wir glauben an KI nicht als reinen Selbstzweck — wir glauben an KI als Werkzeug, das den globalen Mittelstand befähigt, Besseres zu schaffen.",
+    "attribution": "— Die Vision von wil-AI"
+  },
+  "faq": {
+    "sectionLabel": "FAQ",
+    "title": "Häufig gestellte Fragen",
+    "items": [
+      {
+        "question": "Was macht wil-AI anders als klassische Beratungen?",
+        "answer": "Wir sind kein Dienstleister, der Ihnen ein Konzept übergibt und verschwindet. Wir arbeiten als strategischer Partner — auf Augenhöhe, langfristig und mit echtem Engagement für Ihren Erfolg. Unser Fokus liegt auf nachhaltiger KI-Integration für den Mittelstand (KMU), nicht auf kurzfristigen Projekten."
+      },
+      {
+        "question": "Wann startet wil-AI offiziell?",
+        "answer": "Wir befinden uns aktuell in der Gründungsphase. Der offizielle Launch ist für 2026 geplant. Wenn Sie bereits jetzt Interesse an einer Zusammenarbeit haben, kontaktieren Sie uns gerne — wir freuen uns auf den Austausch."
+      },
+      {
+        "question": "Für welche Unternehmen ist wil-AI geeignet?",
+        "answer": "Unser Fokus und unsere Struktur sind optimal auf den Mittelstand (KMU) ausgerichtet. Unsere Expertise erstreckt sich dabei branchenübergreifend — von produzierendem Gewerbe über Finanzdienstleistungen bis hin zu Gesundheitswesen und Handel. Überall, wo gewachsene Geschäftsprozesse durch KI global wettbewerbsfähig optimiert werden können."
+      },
+      {
+        "question": "Brauche ich technisches Vorwissen?",
+        "answer": "Nein. Wir holen Sie genau dort ab, wo Sie stehen. Ob Sie bereits erste KI-Erfahrungen haben oder völlig neu in dem Thema sind — wir passen unsere Begleitung individuell an die Realität und die Ressourcen Ihres Unternehmens an."
+      },
+      {
+        "question": "Wie kann ich Kontakt aufnehmen?",
+        "answer": "Schreiben Sie uns eine E-Mail an ai-now@wil-ai.de. Wir melden uns zeitnah bei Ihnen."
+      }
+    ]
+  },
+  "contact": {
+    "sectionLabel": "Kontakt",
+    "title": "Lassen Sie uns sprechen.",
+    "subtitle": "Sie haben Fragen, Ideen oder möchten Teil unserer Vision werden? Wir freuen uns auf Ihre Nachricht.",
+    "emailLabel": "E-Mail",
+    "cta": "E-Mail schreiben"
+  },
+  "footer": {
+    "copyright": "© 2026 wil-AI. Alle Rechte vorbehalten.",
+    "tagline": "Think Tank für nachhaltige KI-Integration"
+  },
+  "darkMode": {
+    "light": "Hell",
+    "dark": "Dunkel"
+  }
+}

@@ -1,0 +1,217 @@
+---
+import de from '../i18n/de.json';
+import en from '../i18n/en.json';
+---
+
+<section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
+  <!-- Parallax background layers -->
+  <div class="parallax-layer absolute inset-0" data-speed="0.3">
+    <div class="absolute top-1/4 left-1/4 w-96 h-96 rounded-full bg-primary-600/5 blur-3xl"></div>
+    <div class="absolute bottom-1/4 right-1/4 w-80 h-80 rounded-full bg-accent-400/5 blur-3xl"></div>
+  </div>
+  <div class="parallax-layer absolute inset-0" data-speed="0.15">
+    <div class="absolute top-1/3 right-1/3 w-64 h-64 rounded-full bg-primary-500/3 blur-2xl"></div>
+  </div>
+
+  <!-- Canvas for neural network background -->
+  <canvas id="neural-canvas" class="absolute inset-0 w-full h-full" style="opacity:0.4;"></canvas>
+
+  <div class="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <!-- Badge -->
+    <div class="reveal inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary-500/30 bg-primary-500/5 mb-8">
+      <span class="w-2 h-2 rounded-full bg-accent-400 animate-pulse"></span>
+      <span class="text-sm font-medium text-primary-300">
+        <span data-lang-de>{de.hero.badge}</span>
+        <span data-lang-en class="hidden">{en.hero.badge}</span>
+      </span>
+    </div>
+
+    <!-- Title with typing animation -->
+    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold leading-tight mb-6">
+      <span data-lang-de>
+        <span id="typing-de" class="section-title"></span><span class="typing-cursor" id="cursor-de"></span>
+      </span>
+      <span data-lang-en class="hidden">
+        <span id="typing-en" class="section-title"></span><span class="typing-cursor" id="cursor-en" style="display:none;"></span>
+      </span>
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="reveal text-lg sm:text-xl md:text-2xl text-dark-400 max-w-3xl mx-auto mb-10 leading-relaxed">
+      <span data-lang-de>{de.hero.subtitle}</span>
+      <span data-lang-en class="hidden">{en.hero.subtitle}</span>
+    </p>
+
+    <!-- CTA -->
+    <div class="reveal">
+      <a href="#about" class="inline-flex items-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-primary-600 to-primary-500 text-white font-semibold text-lg shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 hover:scale-105 transition-all duration-300">
+        <span data-lang-de>{de.hero.cta}</span>
+        <span data-lang-en class="hidden">{en.hero.cta}</span>
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- Scroll hint -->
+  <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-dark-500">
+    <div class="w-6 h-10 rounded-full border-2 border-dark-600 flex items-start justify-center p-1.5">
+      <div class="w-1.5 h-3 rounded-full bg-primary-400 animate-bounce"></div>
+    </div>
+  </div>
+</section>
+
+<script define:vars={{ deTitleRaw: de.hero.title, enTitleRaw: en.hero.title }}>
+  // ── Typing animation ──
+  const deTitle = deTitleRaw;
+  const enTitle = enTitleRaw;
+
+  // Words to get gradient treatment
+  const gradientWordsDE = ['KI-Strategien'];
+  const gradientWordsEN = ['AI strategies'];
+
+  function wrapGradient(text, words) {
+    let result = text;
+    words.forEach(word => {
+      result = result.replace(word, `<span class="gradient-text">${word}</span>`);
+    });
+    return result;
+  }
+
+  function typeText(elementId, cursorId, text, gradientWords, speed = 40) {
+    const el = document.getElementById(elementId);
+    const cursor = document.getElementById(cursorId);
+    if (!el || !cursor) return;
+
+    let i = 0;
+    cursor.style.display = 'inline-block';
+
+    function type() {
+      if (i < text.length) {
+        el.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, speed);
+      } else {
+        // Replace with gradient version
+        el.innerHTML = wrapGradient(text, gradientWords);
+        setTimeout(() => {
+          cursor.style.display = 'none';
+        }, 2000);
+      }
+    }
+    type();
+  }
+
+  // Start typing after page load
+  setTimeout(() => {
+    typeText('typing-de', 'cursor-de', deTitle, gradientWordsDE, 35);
+  }, 600);
+
+  // Re-type on language switch
+  const observer = new MutationObserver((mutations) => {
+    mutations.forEach(m => {
+      if (m.attributeName === 'data-lang') {
+        const lang = document.documentElement.getAttribute('data-lang');
+        if (lang === 'en') {
+          const el = document.getElementById('typing-en');
+          if (el && el.textContent === '') {
+            typeText('typing-en', 'cursor-en', enTitle, gradientWordsEN, 35);
+          }
+        }
+      }
+    });
+  });
+  observer.observe(document.documentElement, { attributes: true });
+
+  // ── Neural network canvas ──
+  const canvas = document.getElementById('neural-canvas');
+  if (canvas) {
+    const ctx = canvas.getContext('2d');
+    let width, height, nodes = [], mouse = { x: -1000, y: -1000 };
+
+    function resize() {
+      width = canvas.width = canvas.offsetWidth;
+      height = canvas.height = canvas.offsetHeight;
+    }
+
+    function initNodes() {
+      nodes = [];
+      const count = Math.min(Math.floor((width * height) / 15000), 80);
+      for (let i = 0; i < count; i++) {
+        nodes.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.4,
+          r: Math.random() * 2 + 1
+        });
+      }
+    }
+
+    function draw() {
+      if (!ctx) return;
+      ctx.clearRect(0, 0, width, height);
+
+      // Update and draw nodes
+      nodes.forEach(n => {
+        n.x += n.vx;
+        n.y += n.vy;
+        if (n.x < 0 || n.x > width) n.vx *= -1;
+        if (n.y < 0 || n.y > height) n.vy *= -1;
+
+        // Mouse interaction
+        const dx = mouse.x - n.x;
+        const dy = mouse.y - n.y;
+        const dist = Math.sqrt(dx * dx + dy * dy);
+        if (dist < 200) {
+          n.x -= dx * 0.005;
+          n.y -= dy * 0.005;
+        }
+
+        ctx.beginPath();
+        ctx.arc(n.x, n.y, n.r, 0, Math.PI * 2);
+        ctx.fillStyle = 'rgba(99,102,241,0.5)';
+        ctx.fill();
+      });
+
+      // Draw connections
+      for (let i = 0; i < nodes.length; i++) {
+        for (let j = i + 1; j < nodes.length; j++) {
+          const dx = nodes[i].x - nodes[j].x;
+          const dy = nodes[i].y - nodes[j].y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 150) {
+            ctx.beginPath();
+            ctx.moveTo(nodes[i].x, nodes[i].y);
+            ctx.lineTo(nodes[j].x, nodes[j].y);
+            ctx.strokeStyle = `rgba(99,102,241,${0.15 * (1 - dist / 150)})`;
+            ctx.lineWidth = 0.5;
+            ctx.stroke();
+          }
+        }
+      }
+
+      requestAnimationFrame(draw);
+    }
+
+    window.addEventListener('resize', () => { resize(); initNodes(); });
+    canvas.addEventListener('mousemove', (e) => {
+      const rect = canvas.getBoundingClientRect();
+      mouse.x = e.clientX - rect.left;
+      mouse.y = e.clientY - rect.top;
+    });
+    canvas.addEventListener('mouseleave', () => { mouse.x = -1000; mouse.y = -1000; });
+
+    resize();
+    initNodes();
+    draw();
+  }
+
+  // ── Parallax scrolling ──
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    document.querySelectorAll('.parallax-layer').forEach(layer => {
+      const speed = parseFloat(layer.getAttribute('data-speed') || '0');
+      layer.style.transform = `translateY(${scrollY * speed}px)`;
+    });
+  }, { passive: true });
+</script>

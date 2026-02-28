@@ -1,0 +1,114 @@
+{
+    "nav": {
+        "about": "About",
+        "whyNow": "Why Now?",
+        "vision": "Vision",
+        "faq": "FAQ",
+        "contact": "Contact"
+    },
+    "hero": {
+        "badge": "Think Tank in Formation",
+        "title": "The future belongs to those who shape AI strategies today.",
+        "subtitle": "wil-AI is a think tank for the sustainable and responsible integration of artificial intelligence into small and medium-sized enterprises (SMEs) — cross-industry, partnership-based, forward-thinking.",
+        "cta": "Learn more"
+    },
+    "about": {
+        "sectionLabel": "About Us",
+        "title": "A Think Tank. Not an Agency.",
+        "description": "wil-AI unites conviction, experience, and a healthy mix of generations. We are not a traditional consultancy — we see ourselves as strategic partners helping small and medium-sized enterprises (SMEs) navigate the global AI transformation to remain highly competitive.",
+        "cards": [
+            {
+                "icon": "handshake",
+                "title": "Partnership-Based",
+                "text": "We work as equals. No consultant jargon — real co-thinking and co-creating for your success."
+            },
+            {
+                "icon": "shield",
+                "title": "Responsible",
+                "text": "Sustainability and ethics aren't in our fine print — they are our guiding principle."
+            },
+            {
+                "icon": "layers",
+                "title": "Cross-Industry",
+                "text": "From regional manufacturing to global hidden champions — smart AI strategies tailored to the reality of the mid-market."
+            },
+            {
+                "icon": "users",
+                "title": "Generational Mix",
+                "text": "Experience meets innovation. Our team brings together diverse perspectives and age groups."
+            }
+        ]
+    },
+    "whyNow": {
+        "sectionLabel": "Why Now?",
+        "title": "The numbers speak for themselves.",
+        "subtitle": "The AI revolution won't wait. Companies that don't act today will fall behind tomorrow.",
+        "stats": [
+            {
+                "value": 87,
+                "suffix": "%",
+                "label": "of executives see AI as business-critical"
+            },
+            {
+                "value": 65,
+                "suffix": "%",
+                "label": "of companies have no AI strategy"
+            },
+            {
+                "value": 4.4,
+                "suffix": "T $",
+                "label": "projected AI market by 2028"
+            },
+            {
+                "value": 40,
+                "suffix": "%",
+                "label": "productivity increase through AI integration"
+            }
+        ]
+    },
+    "vision": {
+        "quote": "We don't believe in AI for its own sake — we believe in AI as a tool that empowers global SMEs to create something better.",
+        "attribution": "— The wil-AI Vision"
+    },
+    "faq": {
+        "sectionLabel": "FAQ",
+        "title": "Frequently Asked Questions",
+        "items": [
+            {
+                "question": "What makes wil-AI different from traditional consultancies?",
+                "answer": "We're not a service provider who hands over a concept and disappears. We work as a strategic partner — as equals, long-term, and with genuine commitment to your success. Our focus is on sustainable AI integration tailored for SMEs, not on short-term projects."
+            },
+            {
+                "question": "When does wil-AI officially launch?",
+                "answer": "We are currently in the founding phase. The official launch is planned for 2026. If you're already interested in a collaboration, feel free to contact us — we look forward to the conversation."
+            },
+            {
+                "question": "Which companies is wil-AI suitable for?",
+                "answer": "Our focus and structure are optimally aligned with small and medium-sized enterprises (SMEs). Our expertise spans across industries — from manufacturing to financial services, healthcare, and retail. Anywhere established business processes can be globally optimized through AI."
+            },
+            {
+                "question": "Do I need technical background knowledge?",
+                "answer": "No. We meet you exactly where you stand. Whether you already have initial AI experience or are completely new to the topic — we tailor our guidance individually to the reality and resources of your business."
+            },
+            {
+                "question": "How can I get in touch?",
+                "answer": "Send us an email at ai-now@wil-ai.de. We'll get back to you promptly."
+            }
+        ]
+    },
+    "contact": {
+        "sectionLabel": "Contact",
+        "title": "Let's talk.",
+        "subtitle": "Have questions, ideas, or want to be part of our vision? We'd love to hear from you.",
+        "emailLabel": "Email",
+        "cta": "Send an email"
+    },
+    "footer": {
+        "copyright": "© 2026 wil-AI. All rights reserved.",
+        "tagline": "Think Tank for Sustainable AI Integration"
+    },
+    "darkMode": {
+        "light": "Light",
+        "dark": "Dark"
+    }
+}
