@@ -194,8 +194,10 @@ const t = { de, en };
     applyTheme(!document.body.classList.contains("light-mode"));
   });
 
-  // Apply saved theme
-  if (localStorage.getItem("wilai-theme") === "light") {
+  // Apply saved theme (Default is light mode)
+  if (localStorage.getItem("wilai-theme") === "dark") {
+    applyTheme(false);
+  } else {
     applyTheme(true);
   }
 

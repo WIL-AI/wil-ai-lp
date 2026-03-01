@@ -117,9 +117,10 @@ const {
         .querySelectorAll(".icon-animate")
         .forEach((el) => iconObserver.observe(el));
 
-      // ── Dark mode ──
+      // ── Dark mode / Light mode ──
       const savedTheme = localStorage.getItem("wilai-theme");
-      if (savedTheme === "light") {
+      // Default to light mode unless dark mode is explicitly saved
+      if (savedTheme !== "dark") {
         document.body.classList.add("light-mode");
       }
     </script>
