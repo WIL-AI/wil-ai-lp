@@ -56,7 +56,7 @@
       },
       {
         "value": 4.4,
-        "suffix": "Bio. €",
+        "suffix": " Bio. €",
         "label": "prognostizierter KI-Markt bis 2028"
       },
       {
@@ -113,5 +113,11 @@
   },
   "legal": {
     "impressum": "Impressum"
+  },
+  "methods": {
+    "sectionLabel": "Expertise",
+    "title": "Methoden & Technologien",
+    "subtitle": "wil-AI nutzt modernste agentische Workflows und fortschrittliche KI-Architekturen, um komplexe Geschäftsprozesse im Mittelstand nachhaltig zu optimieren.",
+    "aiNote": "Visualisierung erstellt mit Unterstützung von KI"
   }
 }

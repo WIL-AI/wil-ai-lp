@@ -113,5 +113,11 @@
     },
     "legal": {
         "impressum": "Legal Notice"
+    },
+    "methods": {
+        "sectionLabel": "Expertise",
+        "title": "Methods & Technologies",
+        "subtitle": "wil-AI utilizes state-of-the-art agentic workflows and advanced AI architectures to sustainably optimize complex business processes in medium-sized enterprises.",
+        "aiNote": "Visualization created with the support of AI"
     }
 }
